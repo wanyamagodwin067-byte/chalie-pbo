@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CHALIE PBO supports youth mental health, wellbeing education, peer support and referrals in Eldoret, Kenya."
+  />
+  <title>CHALIE PBO | Youth Mental Health Support</title>
+
+  <style>
+    :root {
+      --navy: #123047;
+      --teal: #087d78;
+      --mint: #e8f6f3;
+      --gold: #f4b942;
+      --ink: #1d2a33;
+      --muted: #5b6870;
+      --white: #ffffff;
+      --line: #dce6e4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      padding: 13px 19px;
+      border-radius: 7px;
+      margin: 5px 7px 5px 0;
+    }
+
+    .button:hover {
+      background: #056963;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+
+    .button.secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .button.gold {
+      background: var(--gold);
+      color: #1f2528;
+    }
+
+    .button.gold:hover {
+      background: #e5a92e;
+    }
+
+    .hero {
+      background: linear-gradient(125deg, var(--navy), #195b67);
+      color: var(--white);
+      padding: 86px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #bceee8;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      margin: 12px 0 18px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .lead {
+      font-size: 1.16rem;
+      max-width: 700px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .notice {
+      background: #fff4d8;
+      border-left: 5px solid var(--gold);
+      padding: 16px 18px;
+      margin: 0 auto;
+      color: #4d3a10;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .soft {
+      background: var(--mint);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 32px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 14px rgba(18, 48, 71, 0.06);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      border-left: 4px solid var(--teal);
+      background: var(--white);
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.75rem;
+      color: var(--navy);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: var(--white);
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 18px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-list li {
+      margin: 10px 0;
+    }
+
+    .contact-list a {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    footer {
+      background: #0c2435;
+      color: #dce7ec;
+      padding: 35px 0;
+    }
+
+    footer p {
+      margin: 6px 0;
+      font-size: 0.92rem;
+    }
+
+    footer a {
+      color: #bceee8;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 10px 14px;
+      }
+
+      .hero {
+        padding: 62px 0 50px;
+      }
+
+      .hero-grid,
+      .grid,
+      .grid.two,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">CHALIE PBO</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#support">Get Support</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#resources">Learn</a>
+        <a href="#involved">Get Involved</a>
+        <a href="#contact">Contact</a>
+        <a class="button gold" href="#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Youth mental health and wellbeing</div>
+
+          <h1>You do not have to face it alone.</h1>
+
+          <p class="lead">
+            CHALIE PBO supports young people through mental-health education,
+            safe peer-support spaces, community programmes and referrals to
+            appropriate professional care in Eldoret, Kenya.
+          </p>
+
+          <a class="button gold" href="#support">Get Support</a>
+          <a class="button secondary" href="#involved">Become Involved</a>
+        </div>
+
+        <aside class="hero-card">
+          <strong>Important safety information</strong>
+
+          <p>
+            This website is not an emergency service. If you or someone else is
+            in immediate danger, needs urgent medical help, or may harm
+            themselves or another person, go to the nearest hospital or contact
+            local emergency services.
+          </p>
+
+          <a class="button gold" href="#support">Find support options</a>
+        </aside>
+      </div>
+    </section>
+
+    <p class="notice container">
+      <strong>Privacy matters:</strong> CHALIE PBO treats personal information
+      with care. We explain when information may need to be shared to help
+      protect someone's safety.
+    </p>
+
+    <section id="support">
+      <div class="container">
+        <h2>How we can help</h2>
+
+        <p class="section-intro">
+          Reaching out can feel difficult. Start with the option that feels most
+          comfortable for you. CHALIE PBO does not replace emergency or clinical
+          mental-health services.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Peer support</h3>
+            <p>
+              Connect with safe, facilitated youth spaces where young people can
+              share experiences, learn and support one another.
+            </p>
+            <a class="button" href="#contact">Ask about peer support</a>
+          </article>
+
+          <article class="card">
+            <h3>Counselling and referrals</h3>
+            <p>
+              Learn about available support options and possible referral
+              pathways to qualified professionals and health facilities.
+            </p>
+            <a class="button" href="#contact">Ask about referrals</a>
+          </article>
+
+          <article class="card">
+            <h3>Wellbeing resources</h3>
+            <p>
+              Explore practical information about stress, anxiety, low mood,
+              relationships, exam pressure and supporting a friend.
+            </p>
+            <a class="button" href="#resources">Explore resources</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="programmes" class="soft">
+      <div class="container">
+        <h2>Our programmes</h2>
+
+        <p class="section-intro">
+          We work with young people, families, schools, campuses and community
+          partners to make mental-health support more accessible and less
+          stigmatised.
+        </p>
+
+        <div class="grid two">
+          <article class="card">
+            <h3>Peer Support Circles</h3>
+            <p>
+              Facilitated group sessions that promote connection, listening,
+              healthy coping skills and help-seeking.
+            </p>
+            <a href="#contact">Join or refer someone →</a>
+          </article>
+
+          <article class="card">
+            <h3>School and Campus Wellbeing</h3>
+            <p>
+              Workshops, awareness sessions and referral guidance for schools,
+              colleges and youth groups.
+            </p>
+            <a href="#contact">Bring a programme to your school →</a>
+          </article>
+
+          <article class="card">
+            <h3>Parent and Caregiver Support</h3>
+            <p>
+              Practical learning sessions for adults supporting young people
+              through difficult emotions and life changes.
+            </p>
+            <a href="#contact">Ask about caregiver sessions →</a>
+          </article>
+
+          <article class="card">
+            <h3>Community Awareness</h3>
+            <p>
+              Campaigns and events that encourage understanding, reduce stigma
+              and direct people to appropriate help.
+            </p>
+            <a href="#involved">Partner with us →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="container">
+        <h2>Learn about mental health</h2>
+
+        <p class="section-intro">
+          Information can be a useful first step. These topics are educational
+          and are not a diagnosis or a substitute for professional care.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Stress and burnout</h3>
+            <p>
+              Simple ways to recognise pressure, rest and build manageable
+              routines.
+            </p>
+            <a href="#contact">Request information →</a>
+          </article>
+
+          <article class="card">
+            <h3>Anxiety and low mood</h3>
+            <p>
+              Understand common signs and learn when it may be time to seek
+              extra support.
+            </p>
+            <a href="#contact">Request information →</a>
+          </article>
+
+          <article class="card">
+            <h3>Supporting a friend</h3>
+            <p>
+              How to listen without judgement, encourage help-seeking and
+              respect boundaries.
+            </p>
+            <a href="#contact">Request information →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Our intended impact</h2>
+
+        <p class="section-intro">
+          Replace these with verified figures once CHALIE PBO begins reporting
+          programme results.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>—</strong>
+            <span>Young people reached</span>
+          </div>
+
+          <div class="stat">
+            <strong>—</strong>
+            <span>Peer-support sessions</span>
+          </div>
+
+          <div class="stat">
+            <strong>—</strong>
+            <span>Schools and groups engaged</span>
+          </div>
+
+          <div class="stat">
+            <strong>—</strong>
+            <span>Community partners</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="involved" class="soft">
+      <div class="container">
+        <h2>Get involved</h2>
+
+        <p class="section-intro">
+          Help make youth-centred mental-health support and information more
+          accessible in Eldoret and surrounding communities.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Volunteer responsibly</h3>
+            <p>
+              Support events, awareness activities, communications or approved
+              peer programmes. Volunteers do not provide clinical counselling
+              unless qualified and authorised.
+            </p>
+            <a class="button" href="#contact">Volunteer with us</a>
+          </article>
+
+          <article class="card">
+            <h3>Partner with CHALIE</h3>
+            <p>
+              Schools, campuses, health providers, youth groups, businesses and
+              funders can work with us to extend wellbeing support.
+            </p>
+            <a class="button" href="#contact">Start a partnership</a>
+          </article>
+
+          <article id="donate" class="card">
+            <h3>Donate</h3>
+            <p>
+              Donations can help fund youth sessions, learning materials,
+              outreach and referral support. Contact us to arrange a verified
+              donation method.
+            </p>
+            <a
+              class="button"
+              href="mailto:godwinwanyama@ymail.com?subject=Donation%20to%20CHALIE%20PBO"
+            >
+              Ask how to donate
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container">
+        <h2>Contact CHALIE PBO</h2>
+
+        <p>
+          For non-emergency questions about programmes, referrals, volunteering,
+          partnerships or donations, contact our team.
+        </p>
+
+        <a class="button gold" href="mailto:godwinwanyama@ymail.com">
+          Email CHALIE PBO
+        </a>
+
+        <a
+          class="button secondary"
+          href="https://wa.me/254706361188"
+          target="_blank"
+          rel="noopener"
+        >
+          Message on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid two">
+        <div>
+          <h2>Contact details</h2>
+
+          <ul class="contact-list">
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:godwinwanyama@ymail.com">
+                godwinwanyama@ymail.com
+              </a>
+            </li>
+
+            <li>
+              <strong>Phone / WhatsApp:</strong>
+              <a href="tel:+254706361188">+254 706 361 188</a>
+            </li>
+
+            <li><strong>Location:</strong> West Market, Eldoret, Kenya</li>
+            <li>
+              <strong>Postal address:</strong> P.O. Box 7346, Eldoret, Kenya
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Safeguarding and confidentiality</h2>
+
+          <p>
+            CHALIE PBO is committed to respectful, youth-centred and
+            safeguarding-aware services. Before collecting sensitive personal
+            information, publish a privacy policy, safeguarding policy and clear
+            consent process—especially for people under 18.
+          </p>
+
+          <p>
+            <strong>Do not use this site as an emergency service.</strong> In an
+            immediate emergency, seek urgent help from local emergency services
+            or the nearest hospital.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>CHALIE PBO</strong>
+      <p>Youth mental health and wellbeing support in Eldoret, Kenya.</p>
+      <p>
+        © 2026 CHALIE PBO. Before launch, add your registration details, privacy
+        policy, safeguarding policy and verified emergency guidance.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
